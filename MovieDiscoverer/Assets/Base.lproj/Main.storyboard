@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIQ-DN-R6n">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WlE-GV-0KC">
+            <objects>
+                <navigationController id="sIQ-DN-R6n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BU0-Lt-U0c">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3d6-HX-qft" kind="relationship" relationship="rootViewController" id="HfJ-O3-lxx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daz-lM-mZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1137" y="31"/>
+        </scene>
+        <!--Movie Discoverer-->
+        <scene sceneID="e1Z-zJ-0DG">
+            <objects>
+                <tabBarController id="3d6-HX-qft" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Movie Discoverer" id="sdH-6F-edQ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z8w-14-qGF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1DV-qc-ZtN"/>
+                        <segue destination="cnh-ve-v7h" kind="relationship" relationship="viewControllers" id="XIw-wJ-bJJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkK-h1-maH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="30"/>
+        </scene>
+        <!--Movie Table View Controller-->
+        <scene sceneID="BYH-uL-V1h">
+            <objects>
+                <tableViewController storyboardIdentifier="MovieTableViewController" title="Movie Table View Controller" id="cnh-ve-v7h" customClass="MovieTableViewController" customModule="MovieDiscoverer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a6C-UE-OWw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" textLabel="RxI-zV-gc9" detailTextLabel="14c-Dv-EM1" style="IBUITableViewCellStyleSubtitle" id="DkE-Zq-9vy">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DkE-Zq-9vy" id="hIn-Db-Fug">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RxI-zV-gc9">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="14c-Dv-EM1">
+                                            <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cnh-ve-v7h" id="u5g-RV-bBK"/>
+                            <outlet property="delegate" destination="cnh-ve-v7h" id="qFb-7Q-Dwb"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="List" selectedImage="List" id="Hfb-4t-WTn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2v-Rv-xTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="403"/>
+        </scene>
+        <!--Movie Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Movie Search View Controller" id="BYZ-38-t0r" customClass="MovieSearchViewController" customModule="MovieDiscoverer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bmY-7O-d3w" userLabel="Main Stack View">
+                                <rect key="frame" x="50" y="114" width="275" height="298"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" image="MovieIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4vp-dp-caE">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="gUG-2b-xPz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xcD-NR-MfS" userLabel="Filter Stack View">
+                                        <rect key="frame" x="0.0" y="130" width="275" height="168"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a movie genre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBf-Jb-FP1">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="vJo-fT-cQd"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select certification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-GY-B6i">
+                                                <rect key="frame" x="0.0" y="44" width="275" height="36"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select minimum rating" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9J-cH-gbt">
+                                                <rect key="frame" x="0.0" y="88" width="275" height="36"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSh-eU-zGm" customClass="RoundedButton" customModule="MovieDiscoverer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="132" width="275" height="36"/>
+                                                <color key="backgroundColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="DISCOVER">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="discoverPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0e-za-bw7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Mea-GY-B6i" firstAttribute="height" secondItem="PBf-Jb-FP1" secondAttribute="height" id="XJ1-5E-4Gw"/>
+                                            <constraint firstItem="W9J-cH-gbt" firstAttribute="height" secondItem="PBf-Jb-FP1" secondAttribute="height" id="idD-xu-pBd"/>
+                                            <constraint firstItem="ZSh-eU-zGm" firstAttribute="height" secondItem="PBf-Jb-FP1" secondAttribute="height" id="vfB-FD-ESP"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" spacing="20"/>
+                            </stackView>
+                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDC-nm-BF8" userLabel="Overlay">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i50-o1-0ws">
+                                <rect key="frame" x="169" y="322.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bmY-7O-d3w" secondAttribute="trailing" constant="50" id="3fb-53-7Dk"/>
+                            <constraint firstItem="i50-o1-0ws" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="JPJ-m3-d65"/>
+                            <constraint firstItem="bmY-7O-d3w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="PFM-G3-1Tp">
+                                <variation key="heightClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QDC-nm-BF8" secondAttribute="trailing" id="PjX-Yt-c3y"/>
+                            <constraint firstItem="bmY-7O-d3w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="R8H-I7-FXS"/>
+                            <constraint firstItem="QDC-nm-BF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RYX-ik-sqZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QDC-nm-BF8" secondAttribute="bottom" id="kwF-0f-85A"/>
+                            <constraint firstItem="QDC-nm-BF8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mTf-F4-64U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="bmY-7O-d3w" secondAttribute="bottom" constant="250" id="rYn-qn-l9b"/>
+                            <constraint firstItem="i50-o1-0ws" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ufn-mX-UcX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Discover" image="Film" selectedImage="Film" id="iIw-Uq-o1W">
+                        <color key="badgeColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="GenreTextField" destination="PBf-Jb-FP1" id="m5B-ne-kkg"/>
+                        <outlet property="RatingTextField" destination="W9J-cH-gbt" id="KQc-tN-STZ"/>
+                        <outlet property="activityIndicator" destination="i50-o1-0ws" id="Nf6-zU-yjZ"/>
+                        <outlet property="certificationTextField" destination="Mea-GY-B6i" id="n4o-Wk-Nzz"/>
+                        <outlet property="genreTextField" destination="PBf-Jb-FP1" id="rFH-C4-fzm"/>
+                        <outlet property="overlay" destination="QDC-nm-BF8" id="yF1-oJ-mbP"/>
+                        <outlet property="ratingTextField" destination="W9J-cH-gbt" id="ejy-k1-pEQ"/>
+                        <outlet property="searchButton" destination="ZSh-eU-zGm" id="2UT-wE-rBB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.60000000000002" y="-314.39280359820094"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="RJi-BU-R0I">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailsViewController" title="Movie Details View Controller" id="sc3-hm-W33" customClass="MovieDetailsViewController" customModule="MovieDiscoverer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwK-tY-QO3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kp9-Pu-CJt" userLabel="Main Stack View">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nl8-0v-Cqf" userLabel="Movie Poster Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="299.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ImagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="NnC-ED-oCG">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="299.5"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oh1-1V-LLz" userLabel="Right Details Stack View">
+                                                <rect key="frame" x="171.5" y="0.0" width="163.5" height="299.5"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Movie Title" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-IE-Toe" userLabel="Movie Title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="xzJ-N8-NQg"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="t3h-Vv-Lyk" userLabel="Release Date Stack View">
+                                                        <rect key="frame" x="0.0" y="87.5" width="163.5" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGW-rc-Nfa" userLabel="Release Date Header">
+                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                                <color key="textColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-st-xFW" userLabel="Release Date">
+                                                                <rect key="frame" x="0.0" y="19.5" width="163.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NDN-oU-xOB" userLabel="Genre Stack View">
+                                                        <rect key="frame" x="0.0" y="163.5" width="163.5" height="59.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCn-sJ-GI6" userLabel="Genre Header">
+                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                                <color key="textColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Genre" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2td-aQ-fIz" userLabel="Genre">
+                                                                <rect key="frame" x="0.0" y="19.5" width="163.5" height="40"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="3RI-gR-QYW"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-kM-UrF" userLabel="Rating Stack View">
+                                                        <rect key="frame" x="0.0" y="260.5" width="163.5" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggN-kR-GBV" userLabel="Rating Header">
+                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                                <color key="textColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Movie Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl9-nA-EW4" userLabel="Rating">
+                                                                <rect key="frame" x="0.0" y="19.5" width="163.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <variation key="heightClass=compact">
+                                                    <mask key="subviews">
+                                                        <exclude reference="t3h-Vv-Lyk"/>
+                                                        <exclude reference="NDN-oU-xOB"/>
+                                                        <exclude reference="lmb-kM-UrF"/>
+                                                    </mask>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FJF-gr-BuU" userLabel="Movie Details Stack View">
+                                        <rect key="frame" x="0.0" y="307.5" width="335" height="299.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RND-lt-rn1" userLabel="Synopsis Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="251.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-T3-mQi" userLabel="Synopsis Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                                        <color key="textColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" editable="NO" text="Details" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3b-Mv-KdR" userLabel="Synopsis Text View">
+                                                        <rect key="frame" x="0.0" y="20.5" width="335" height="231"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hm-ih-N2E" customClass="RoundedButton" customModule="MovieDiscoverer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="259.5" width="335" height="40"/>
+                                                <color key="backgroundColor" red="0.15006846190000001" green="0.34558570379999998" blue="0.4706059098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="864-SW-xYh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="ADD TO WATCHLIST">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addToWatchlist:" destination="sc3-hm-W33" eventType="touchUpInside" id="cGd-7z-7xQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-Te-whv">
+                                <rect key="frame" x="92" y="180" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qBp-Te-whv" firstAttribute="centerY" secondItem="NnC-ED-oCG" secondAttribute="centerY" id="4sx-9k-biN"/>
+                            <constraint firstItem="Ccb-6M-JmC" firstAttribute="trailing" secondItem="Kp9-Pu-CJt" secondAttribute="trailing" constant="20" id="5x9-v3-mzP"/>
+                            <constraint firstItem="Kp9-Pu-CJt" firstAttribute="top" secondItem="Ccb-6M-JmC" secondAttribute="top" constant="20" id="AMS-CN-tOQ">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="Kp9-Pu-CJt" firstAttribute="leading" secondItem="Ccb-6M-JmC" secondAttribute="leading" constant="20" id="PVT-sf-6gJ"/>
+                            <constraint firstItem="qBp-Te-whv" firstAttribute="centerX" secondItem="NnC-ED-oCG" secondAttribute="centerX" id="ThJ-Dg-3jb"/>
+                            <constraint firstItem="Ccb-6M-JmC" firstAttribute="bottom" secondItem="Kp9-Pu-CJt" secondAttribute="bottom" constant="20" id="rqF-tW-ISO">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ccb-6M-JmC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jzX-CH-E4C"/>
+                    <connections>
+                        <outlet property="addToWatchlistButton" destination="3hm-ih-N2E" id="1mh-RV-cfZ"/>
+                        <outlet property="genreLabel" destination="2td-aQ-fIz" id="Q3l-cR-4Yz"/>
+                        <outlet property="imageActivityIndicator" destination="qBp-Te-whv" id="4vC-E6-g4v"/>
+                        <outlet property="movieTitleLabel" destination="vlQ-IE-Toe" id="FRY-Wg-6ZW"/>
+                        <outlet property="posterImage" destination="NnC-ED-oCG" id="Z1v-eK-8YL"/>
+                        <outlet property="ratingLabel" destination="Yl9-nA-EW4" id="sD3-zl-Q5L"/>
+                        <outlet property="releaseDateLabel" destination="Tdh-st-xFW" id="KLc-IN-Wv6"/>
+                        <outlet property="synopsisLabel" destination="n3b-Mv-KdR" id="a0T-CX-nmn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3R-4x-2t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461.5999999999999" y="28.335832083958024"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Film" width="30" height="30"/>
+        <image name="ImagePlaceholder" width="870" height="1110"/>
+        <image name="List" width="30" height="30"/>
+        <image name="MovieIcon" width="128" height="128"/>
+    </resources>
+</document>
