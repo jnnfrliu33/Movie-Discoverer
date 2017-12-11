@@ -12,10 +12,12 @@ This repository contains the final project app for Udacity's iOS Developer Nanod
 
 As shown in the screenshots below, the user can select specific movie genre, certification and rating by tapping on the text fields.
 
-<img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202017-12-11%20at%2021.58.14.png"> <img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202017-12-11%20at%2021.56.18.png">
+<img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/Discover1.png"> <img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/Discover2.png">
 
-The app then searches for a random movie that fits the specifications selected in the previous screen. The user can add the movie to the watchlist if desired.
+The app searches for a random movie that fits the specifications selected in the previous screen. The user can then choose to add the movie to the watchlist.
 
+<img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/MovieDetails.png">
 
+The watchlist will get updated automatically whenever the user adds new movies to the watchlist. The user can also choose to delete a movie from the watchlist by sliding it to the left of the screen.
 
-
+<img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/Watchlist1.png"> <img src="https://github.com/jnnfrliu33/Movie-Discoverer/blob/master/Screenshots/Watchlist2.png">
