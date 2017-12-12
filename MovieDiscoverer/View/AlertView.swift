@@ -24,5 +24,6 @@ class AlertView {
     
     struct Messages {
         static let textFieldEmpty = "Please make sure you've filled in all fields."
+        static let fetchMovieFailed = "Uh oh, unable to find any movie that matches your criteria. :( Please try a different set of criteria."
     }
 }

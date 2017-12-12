@@ -37,7 +37,7 @@ extension TMDBClient {
                     let randomPage = self.generateRandomPage(withPageLimit: totalPages)
                     self.discoverMovie(genre: genre, certification: certification, rating: rating, withPageNumber: randomPage, completionHandlerForDiscoverMovie: completionHandlerForDiscoverMovie)
                 } else {
-                    completionHandlerForDiscoverMovie(nil, NSError(domain: "discoverMovie parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse discoverMovie"]))
+                    completionHandlerForDiscoverMovie(nil, NSError(domain: "discoverMovie parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: AlertView.Messages.fetchMovieFailed]))
                 }
             }
         }
@@ -62,11 +62,11 @@ extension TMDBClient {
             if let error = error {
                 completionHandlerForDiscoverMovie(nil, error)
             } else {
-                if let results = results?[JSONResponseKeys.MovieResults] as? [[String:AnyObject]] {
+                if let results = results?[JSONResponseKeys.MovieResults] as? [[String:AnyObject]], results.count > 0 {
                     let movie = TMDBMovie.randomMovieFromResults(results)
                     completionHandlerForDiscoverMovie(movie, nil)
                 } else {
-                    completionHandlerForDiscoverMovie(nil, NSError(domain: "discoverMovie parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse discoverMovie"]))
+                    completionHandlerForDiscoverMovie(nil, NSError(domain: "discoverMovie parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: AlertView.Messages.fetchMovieFailed]))
                 }
             }
         }
