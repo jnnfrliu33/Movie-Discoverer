@@ -45,7 +45,7 @@ class MovieTableViewController: UITableViewController {
         do {
             try self.fetchedResultsController.performFetch()
         } catch {
-            print ("Unable to fetch photos!")
+            print ("Unable to fetch movies!")
         }
     }
 }

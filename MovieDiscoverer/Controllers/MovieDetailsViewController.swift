@@ -55,11 +55,11 @@ class MovieDetailsViewController: UIViewController, NSFetchedResultsControllerDe
         // Check if movie is persisted
         if selectedMovie != nil {
             
-            // Fetch persisted movie
+            // Fetch persisted movies
             do {
                 try self.fetchedResultsController.performFetch()
             } catch {
-                print ("Unable to fetch photos!")
+                print ("Unable to fetch movies!")
             }
             
             // Set the movie details
@@ -106,6 +106,22 @@ class MovieDetailsViewController: UIViewController, NSFetchedResultsControllerDe
     // MARK: Actions
     
     @IBAction func addToWatchlist(_ sender: Any) {
+        
+        // Fetch persisted movies
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch {
+            print ("Unable to fetch movies!")
+        }
+        
+        // Check if the movie has already been added to the watchlist
+        for fetchedObject in self.fetchedResultsController.fetchedObjects! {
+            let persistedMovie = fetchedObject as! Movie
+            if movie?.title == persistedMovie.title {
+                AlertView.showAlert(controller: self, message: AlertView.Messages.duplicateMovie)
+                return
+            }
+        }
         
         sharedContext.performAndWait {
             // Create Movie object
