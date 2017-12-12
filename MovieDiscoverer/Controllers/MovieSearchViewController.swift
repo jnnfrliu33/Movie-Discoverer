@@ -42,7 +42,7 @@ class MovieSearchViewController: UIViewController {
             // Display gray overlay and activity indicator
             performUIUpdatesOnMain {
                 self.overlay.isHidden = false
-                self.activityIndicator.isHidden = false
+                self.activityIndicator.startAnimating()
 
             }
             
