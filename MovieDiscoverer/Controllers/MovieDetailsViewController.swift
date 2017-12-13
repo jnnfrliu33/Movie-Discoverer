@@ -117,7 +117,7 @@ class MovieDetailsViewController: UIViewController, NSFetchedResultsControllerDe
         // Check if the movie has already been added to the watchlist
         for fetchedObject in self.fetchedResultsController.fetchedObjects! {
             let persistedMovie = fetchedObject as! Movie
-            if movie?.title == persistedMovie.title {
+            if movie?.title == persistedMovie.title || selectedMovie?.title == persistedMovie.title {
                 AlertView.showAlert(controller: self, message: AlertView.Messages.duplicateMovie)
                 return
             }
